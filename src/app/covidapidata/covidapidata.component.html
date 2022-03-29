@@ -1,0 +1,26 @@
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">States</th>
+          <th scope="col">Positive</th>
+          <th scope="col">negative</th>
+          <th scope="col">Hospitalized Currently</th>
+          <th scope="col">Recovered</th>
+          <th scope="col">Death</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let user of users">
+          <td>{{ user.date|date: 'dd-MM-yyyy'}}</td>
+          <td class="table-light">{{ user.state }}</td>
+          <td class="table-primary">{{ user.positive }}</td>
+          <td class="table-secondary">{{ user.negative}}</td>
+          <td class="table-info">{{ user.hospitalizedCurrently}}</td>
+          <td class="table-success">{{ user.recovered}}</td>
+          <td class="table-danger">{{ user.death}}</td>
+    
+        </tr>
+      </tbody>
+    </table>
